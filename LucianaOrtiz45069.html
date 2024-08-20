@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP n° 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: rgb(60, 255, 190);
+            text-align: center;
+            padding: 5px;
+        }
+        main {
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            th,td {
+                border: 1px solid black;
+                padding: 4px;
+                text-align: center;
+            }
+            tfoot {
+                font-weight: bold;
+                background-color: rgb(75, 233, 180);
+            }
+        }
+        div {
+            padding: 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="estructura">
+        <h1>1. Estructura Básica del Documento HTML</h1>
+        <span>Este documento HTML tiene una estructura básica que incluye la declaración de DOCTYPE, etiquetas de metadatos y un título.</span>
+    </div>
+    <div id="encabezados">
+        <h1>2. Encabezados y Propiedades del Texto</h1>
+        <h3>2.1 Negrita</h3>
+        <b>Este es un texto en negrita.</b>
+        <h3>2.2 Cursiva</h3>
+        <em>Este es un texto en cursiva.</em>
+        <h3>2.2 Subrayado</h3>
+        <u>Este es un texto subrayado.</u>
+    </div>
+    <div id="divisiones">
+        <h1>3. Divisiones y Agrupación de Contenido</h1>
+        <section>
+            <h3>Sección 1</h3>
+            <p>Contenido de la primera sección agrupada en un div.</p>
+        </section>
+        <section>
+            <h3>Sección 2</h3>
+            <p>Contenido de la segunda sección agrupada en un div.</p>
+        </section>
+    </div>
+    <div id="listas">
+        <h1>4. Enlaces y Listas</h1>
+        <p>Visita nuestro <a href="http://google.com.ar" target="_blank">sitio web</a> para obtener más información.</p>
+        <section>
+            <h4>Enlaces internos:</h4>
+            <ul>
+                <li><a href="#estructura">Ir a Estructura</a></li>
+                <li><a href="#multimedia">Ir a Multimedia</a></li>
+                <li><a href="#formulario">Ir a Formulario</a></li>
+            </ul>
+        </section>
+        <section>
+            <h4>Lista desordenada:</h4>
+            <ul>
+                <li>Primer ítem de una lista desordenada</li>
+                <li>Segundo ítem de una lista desordenada</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Lista ordenada:</h4>
+            <ol>
+                <li>Primer ítem de una lista ordenada</li>
+                <li>Segundo ítem de una lista ordenada</li>
+            </ol>
+        </section>
+    </div>
+    <div id="multimedia">
+        <h1>5. Elementos Multimedia</h1>
+        <section>
+            <p>Imagen</p>
+            <img src="https://picsum.photos/200/300" alt="Imagen de ejemplo" height="200px">
+        </section>
+        <section>
+            <p>Video</p>
+            <video controls height="200px">
+                <source src="https://media.w3.org/2010/05/bunny/trailer.mp4"  type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </section>
+        <section>
+            <p>Audio</p>
+            <audio controls>
+                <source src="https://download.blender.org/peach/trailer/trailer_1080p.ogg " type="audio/ogg">
+            </audio>
+        </section>
+    </div>
+    <div id="tablas">
+        <h1>6. Tablas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pantalón</td>
+                    <td>$ 200</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Remera</td>
+                    <td>$ 100</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align: end;" colspan="2">Total:</td>
+                    <td>$ 300</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div id="formulario">
+        <h1>7. Formularios</h1>
+        <form>
+            <div style="margin-bottom: 10px;">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" placeholder="Ingrese su mensaje"></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+            
+        </form>
+    </div>
+    <div id="semantica">
+        <h1>8. Semántica</h1>
+        <header>
+            <h2>Encabezado Principal</h2>
+        </header>
+
+        <main>
+            <section>
+                <ul>
+                    <li><a href="#divisiones">Divisiones</a></li>
+                    <li><a href="#tablas">Tablas</a></li>
+                    <li><a href="#listas">Enlaces y Listas</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Estructura Básica del Documento HTML</h2>
+                <p>Descripción de la estructura.</p>
+            </section>
+            <article>Información complementaria.</article>
+        </main>
+
+        <footer>
+            <p>2024 Trabajo Práctico de HTML.</p>
+        </footer>
+    </div>
+</body>
+</html>
